@@ -44,6 +44,8 @@ I also used some other libraries and helper classes that I had created before.
 
 ### Some Assumptions
 
+- I was not concerned about styling the UI. As far as I understood, the main goal was to handle different types of data and persist this data into a SQLite database.
+
 - There are 2 persisted models in this app: Product and Color.
 
 - A product can have many colors.
