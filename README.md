@@ -47,6 +47,6 @@ I also used some other libraries and helper classes that I had created before.
 - I was not concerned about styling the UI. As far as I understood, the main goal was to handle different types of data and persist this data into a SQLite database.
 
 - There are 2 persisted models in this app: Product and Color.
-
+- The product photo is stored as a photo name in the database. The actual image is read from the Assets catalog.
 - A product can have many colors.
 - A color stores the color name and an ARGB integer representing a 32 bit color.
