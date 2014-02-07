@@ -37,4 +37,19 @@
  */
 - (UIImage *) thumbnail;
 
+/**
+ Try to set the regular price from a string. Only accept numbers. ie.: @"1234.65"
+ @return `YES` in case the `price` string is valid, otherwise `NO`.
+ @param price The string containing the price number.
+ */
+- (BOOL) setRegularPriceFromString:(NSString *) price;
+
+/**
+ Try to set the sale price from a string. Only accept numbers. ie.: @"1234.65"
+ @return `YES` in case the `price` string is valid, otherwise `NO`.
+ @param price The string containing the price number.
+ @discussion In case of an empty `price` string, sets the value to 0.
+ */
+- (BOOL) setSalePriceFromString:(NSString *) price;
+
 @end

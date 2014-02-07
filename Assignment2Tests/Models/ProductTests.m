@@ -110,4 +110,33 @@
     XCTAssertNil(persistenceDictionary[@"colors"], @"colors property should not be present in the persistenceDictionary");
 }
 
+- (void) testPriceSettersFromString
+{
+    Product *product = [self mockProduct];
+    
+    // Valid strings
+    XCTAssertTrue([product setRegularPriceFromString:@"231312.3123"], @"Setter should accept the number '231312.3123' from a string");
+    XCTAssertTrue([[product.regularPrice stringValue] isEqualToString:@"231312.3123"], @"regularPrice should be '231312.3123' after set from the string '231312.3123'");
+    XCTAssertTrue([product setSalePriceFromString:@"231312.3123"], @"Setter should accept the number '231312.3123' from a string");
+    XCTAssertTrue([[product.salePrice stringValue] isEqualToString:@"231312.3123"], @"salePrice should be '231312.3123' after set from the string '231312.3123'");
+    
+    // Invalid strings - Negative values
+    XCTAssertFalse([product setRegularPriceFromString:@"-231312.3123"], @"Setter should not accept the number '-231312.3123' from a string");
+    XCTAssertFalse([[product.regularPrice stringValue] isEqualToString:@"-231312.3123"], @"regularPrice should not be '-231312.3123' after set from the string");
+    XCTAssertFalse([product setSalePriceFromString:@"-231312.3123"], @"Setter should not accept the number '-231312.3123' from a string");
+    XCTAssertFalse([[product.salePrice stringValue] isEqualToString:@"-231312.3123"], @"salePrice should not be '-231312.3123' after set from the string");
+
+    // Invalid strings - Alphanumeric
+    XCTAssertFalse([product setRegularPriceFromString:@"AFVC231312"], @"Setter should not accept the number 'AFVC231312' from a string");
+    XCTAssertFalse([[product.regularPrice stringValue] isEqualToString:@"AFVC231312"], @"regularPrice should not be 'AFVC231312' after set from the string");
+    XCTAssertFalse([product setSalePriceFromString:@"AFVC231312"], @"Setter should not accept the number 'AFVC231312' from a string");
+    XCTAssertFalse([[product.salePrice stringValue] isEqualToString:@"AFVC231312"], @"salePrice should not be 'AFVC231312' after set from the string");
+    
+    // Empty strings
+    XCTAssertFalse([product setRegularPriceFromString:@""], @"Setter should not accept an empty string");
+    XCTAssertFalse([[product.regularPrice stringValue] isEqualToString:@""], @"regularPrice should not be empty after set from an empty string");
+    XCTAssertTrue([product setSalePriceFromString:@""], @"Setter should accept an empty string");
+    XCTAssertTrue([[product.salePrice stringValue] isEqualToString:@"0"], @"salePrice should be '0' after set from an empty string");
+}
+
 @end

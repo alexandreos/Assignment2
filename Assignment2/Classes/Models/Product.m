@@ -86,4 +86,35 @@
     return nil;
 }
 
+- (BOOL) setRegularPriceFromString:(NSString *) price {
+    BOOL success = NO;
+    
+    // Only accept positive strings with only numbers
+    BOOL onlyNumbers = [price rangeOfCharacterFromSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789."] invertedSet]].location == NSNotFound;
+    if([price length] > 0 && onlyNumbers) {
+        self.regularPrice = [NSDecimalNumber decimalNumberWithString:price];
+        success = YES;
+    }
+    
+    return success;
+}
+
+- (BOOL) setSalePriceFromString:(NSString *) price {
+    BOOL success = NO;
+    
+    // Only accept positive strings with only numbers
+    BOOL onlyNumbers = [price rangeOfCharacterFromSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789."] invertedSet]].location == NSNotFound;
+    if([price longLongValue] >= 0 && onlyNumbers) {
+        if([price length] > 0) {
+            self.salePrice = [NSDecimalNumber decimalNumberWithString:price];
+        }
+        else {
+            self.salePrice = [NSDecimalNumber decimalNumberWithMantissa:0 exponent:0 isNegative:NO];
+        }
+        success = YES;
+    }
+    
+    return success;
+}
+
 @end

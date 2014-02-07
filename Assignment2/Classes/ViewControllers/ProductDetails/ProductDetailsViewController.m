@@ -72,8 +72,17 @@
 - (void) updateProduct {
     
     self.product.name = self.textFieldName.text;
-    self.product.salePrice = [NSDecimalNumber decimalNumberWithString:self.textFieldSalePrice.text];
-    self.product.regularPrice = [NSDecimalNumber decimalNumberWithString:self.textFieldRegularPrice.text];
+    
+    if(![self.product setRegularPriceFromString:self.textFieldRegularPrice.text]) {
+        [[[UIAlertView alloc] initWithTitle:@"Oops" message:@"Invalid regular price!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+        return;
+    }
+    
+    if(![self.product setSalePriceFromString:self.textFieldSalePrice.text]) {
+        [[[UIAlertView alloc] initWithTitle:@"Oops" message:@"Invalid sale price!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+        return;
+    }
+    
     self.product.productDescription = self.textViewDescription.text;
     
     NSError *error = nil;
