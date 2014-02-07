@@ -17,6 +17,8 @@
 
 @implementation ProductTests
 
+#pragma mark - Helper Methods
+
 - (NSString *) mockProductJSONString
 {
     return @"{\"productDescription\" : \"This is just mocked data...\",\
@@ -44,6 +46,8 @@
                                            @"colors" : @[@{@"name":@"White", @"argbValue":@4294967295},@{@"name":@"Black", @"argbValue":@4278190080}]}];
 }
 
+#pragma mark - Test Lifecycle
+
 - (void)setUp
 {
     [super setUp];
@@ -55,6 +59,8 @@
     // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
 }
+
+#pragma mark - Test Cases
 
 - (void)testReflectionMapping
 {

@@ -16,10 +16,14 @@
 
 @implementation ColorTests
 
+#pragma mark - Helper Methods
+
 - (NSString *) mockColorJSONString
 {
     return @"{\"id\":10,\"productId\":5,\"name\":\"Yellow\", \"argbValue\":4294967040}";
 }
+
+#pragma mark - Test Lifecycle
 
 - (void)setUp
 {
@@ -32,6 +36,8 @@
     // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
 }
+
+#pragma mark - Test Cases
 
 - (void)testReflectionMapping
 {
@@ -56,6 +62,7 @@
     
     XCTAssertEqualObjects(color.name, persistenceDictionary[@"name"], @"name property should be equal name contained in the persistenceDictionary");
     XCTAssertEqualObjects(color.argbValue, persistenceDictionary[@"argbValue"], @"argbValue property should be equal number contained in the persistenceDictionary");
+    XCTAssertEqualObjects(color.productId, persistenceDictionary[@"productId"], @"productId property should be equal number contained in the persistenceDictionary");
 }
 
 @end

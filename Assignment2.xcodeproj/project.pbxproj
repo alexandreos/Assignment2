@@ -10,6 +10,8 @@
 		8A05E34618A5380800F81B1C /* UIColor+ARGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E34518A5380800F81B1C /* UIColor+ARGB.m */; };
 		8A05E34A18A538E000F81B1C /* ProductColorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E34918A538E000F81B1C /* ProductColorsViewController.m */; };
 		8A05E34D18A53F5300F81B1C /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E34C18A53F5300F81B1C /* UIImage+Extensions.m */; };
+		8A05E35018A5775B00F81B1C /* DatabaseContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E34F18A5775B00F81B1C /* DatabaseContextTests.m */; };
+		8A05E35218A5777300F81B1C /* DatabaseManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A05E35118A5777300F81B1C /* DatabaseManagerTests.m */; };
 		8A2F1F2D18A3BA4000958D60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F1F1D18A3BA4000958D60 /* AppDelegate.m */; };
 		8A2F1F2E18A3BA4000958D60 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F1F2318A3BA4000958D60 /* HomeViewController.m */; };
 		8A2F1F3018A3BA4000958D60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2F1F2918A3BA4000958D60 /* Images.xcassets */; };
@@ -20,7 +22,6 @@
 		8A2F1F7118A3DAE000958D60 /* createTables.sql in Resources */ = {isa = PBXBuildFile; fileRef = 8A2F1F7018A3DAE000958D60 /* createTables.sql */; };
 		8A2F1F7418A3E48000958D60 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F1F7318A3E48000958D60 /* Color.m */; };
 		8A2F1F8718A3F30700958D60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A2F1F8518A3F30700958D60 /* Main.storyboard */; };
-		8A2F1F9118A410C300958D60 /* DatabaseContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F1F9018A410C300958D60 /* DatabaseContextTests.m */; };
 		8A2F1F9518A4316900958D60 /* ProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F1F9418A4316900958D60 /* ProductTests.m */; };
 		8A2F1F9718A433DC00958D60 /* ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F1F9618A433DC00958D60 /* ColorTests.m */; };
 		8A2F1FA018A4399700958D60 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F1F9C18A4399700958D60 /* DatabaseManager.m */; };
@@ -59,6 +60,8 @@
 		8A05E34918A538E000F81B1C /* ProductColorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductColorsViewController.m; sourceTree = "<group>"; };
 		8A05E34B18A53F5300F81B1C /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
 		8A05E34C18A53F5300F81B1C /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		8A05E34F18A5775B00F81B1C /* DatabaseContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseContextTests.m; sourceTree = "<group>"; };
+		8A05E35118A5777300F81B1C /* DatabaseManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseManagerTests.m; sourceTree = "<group>"; };
 		8A2F1F1C18A3BA4000958D60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A2F1F1D18A3BA4000958D60 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8A2F1F2218A3BA4000958D60 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		8A2F1F7318A3E48000958D60 /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
 		8A2F1F7E18A3ED5600958D60 /* ACMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMacros.h; sourceTree = "<group>"; };
 		8A2F1F8618A3F30700958D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8A2F1F9018A410C300958D60 /* DatabaseContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseContextTests.m; sourceTree = "<group>"; };
 		8A2F1F9418A4316900958D60 /* ProductTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTests.m; sourceTree = "<group>"; };
 		8A2F1F9618A433DC00958D60 /* ColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTests.m; sourceTree = "<group>"; };
 		8A2F1F9B18A4399700958D60 /* DatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
@@ -137,6 +139,15 @@
 				8A05E34918A538E000F81B1C /* ProductColorsViewController.m */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		8A05E34E18A5775B00F81B1C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				8A05E35118A5777300F81B1C /* DatabaseManagerTests.m */,
+				8A05E34F18A5775B00F81B1C /* DatabaseContextTests.m */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		8A2F1F1A18A3BA4000958D60 /* Classes */ = {
@@ -289,18 +300,10 @@
 		8A2F1F8E18A410A300958D60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8A2F1F9018A410C300958D60 /* DatabaseContextTests.m */,
 				8A2F1F9418A4316900958D60 /* ProductTests.m */,
 				8A2F1F9618A433DC00958D60 /* ColorTests.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		8A2F1F8F18A410A300958D60 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		8A2F1F9818A4399700958D60 /* Database */ = {
@@ -379,8 +382,8 @@
 		8AABB53F18A3B8D000E1A829 /* Assignment2Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8A05E34E18A5775B00F81B1C /* Database */,
 				8A2F1F8E18A410A300958D60 /* Models */,
-				8A2F1F8F18A410A300958D60 /* Utils */,
 				8AABB54018A3B8D000E1A829 /* Supporting Files */,
 			);
 			path = Assignment2Tests;
@@ -552,8 +555,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A05E35218A5777300F81B1C /* DatabaseManagerTests.m in Sources */,
 				8A2F1F9718A433DC00958D60 /* ColorTests.m in Sources */,
-				8A2F1F9118A410C300958D60 /* DatabaseContextTests.m in Sources */,
+				8A05E35018A5775B00F81B1C /* DatabaseContextTests.m in Sources */,
 				8A2F1F9518A4316900958D60 /* ProductTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

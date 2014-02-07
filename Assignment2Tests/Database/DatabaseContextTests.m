@@ -64,7 +64,7 @@ static NSString * const kTestingDBFileName = @"tests.sqlite";
     [super tearDown];
 }
 
-#pragma mark - Tests
+#pragma mark - Test Cases
 
 - (void) testInsertProduct
 {
