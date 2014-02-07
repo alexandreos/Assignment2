@@ -12,6 +12,9 @@
 
 #define AssertObjectClass(object, klazz) NSAssert([object isKindOfClass:klazz], @"Expected object of class '%@', but received instance of '%@' at %s", NSStringFromClass(klazz), NSStringFromClass([object class]), __PRETTY_FUNCTION__)
 
+NSString * const kDatabaseContextDidSaveProductNotification = @"DatabaseContextDidSaveProductNotification";
+NSString * const kDatabaseContextDidDeleteProductNotification = @"DatabaseContextDidSaveProductNotification";
+
 @interface DatabaseContext ()
 
 @property (nonatomic, weak, readwrite) SQDBManager *dbManager;
@@ -75,6 +78,11 @@
             }
         }
     }];
+    
+    if(success) {
+        // Notify observers about the event
+        [[NSNotificationCenter defaultCenter] postNotificationName:kDatabaseContextDidSaveProductNotification object:product];
+    }
     
     return success;
 }
@@ -166,6 +174,11 @@
 //        }
     }];
     
+    if(success) {
+        // Notify observers about the event
+        [[NSNotificationCenter defaultCenter] postNotificationName:kDatabaseContextDidSaveProductNotification object:product];
+    }
+    
     return success;
 }
 
@@ -203,6 +216,11 @@
             // Rollback in case of failure
             *rollback = !success;
         }];
+    }
+    
+    if(success) {
+        // Notify observers about the event
+        [[NSNotificationCenter defaultCenter] postNotificationName:kDatabaseContextDidDeleteProductNotification object:product];
     }
     
     return success;

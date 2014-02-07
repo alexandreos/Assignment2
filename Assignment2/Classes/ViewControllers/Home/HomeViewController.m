@@ -70,7 +70,7 @@ typedef NS_ENUM(NSInteger, JSONSegmentIndex) {
     [self.navigationController pushViewController:productsViewController animated:YES];
 }
 
-#pragma mark UI Actions
+#pragma mark - UI Actions
 
 - (IBAction)segmentedControlJSONChanged:(id)sender {
     [self setupViewContentsWithSegmentIndex:self.segmentedControlJSON.selectedSegmentIndex];

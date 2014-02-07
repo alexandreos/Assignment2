@@ -11,6 +11,15 @@
 
 @class SQDBManager;
 
+/**
+ Notification name fired when a Product object is inserted or updated
+ */
+extern NSString * const kDatabaseContextDidSaveProductNotification;
+/**
+ Notification name fired when a Product object is deleted
+ */
+extern NSString * const kDatabaseContextDidDeleteProductNotification;
+
 @interface DatabaseContext : NSObject
 
 @property (nonatomic, weak, readonly) SQDBManager *dbManager;

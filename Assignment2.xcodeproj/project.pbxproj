@@ -158,7 +158,6 @@
 				8A2F1F1E18A3BA4000958D60 /* Models */,
 				8A2F1F1F18A3BA4000958D60 /* Util */,
 				8A2F1F2018A3BA4000958D60 /* ViewControllers */,
-				8A2F1F2718A3BA4000958D60 /* Views */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -220,13 +219,6 @@
 				8A2F1F3318A3BA7D00958D60 /* ProductsViewController.m */,
 			);
 			path = Products;
-			sourceTree = "<group>";
-		};
-		8A2F1F2718A3BA4000958D60 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		8A2F1F2818A3BA4000958D60 /* Resources */ = {

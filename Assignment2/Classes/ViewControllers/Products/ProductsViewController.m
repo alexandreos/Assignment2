@@ -18,16 +18,40 @@
 
 @implementation ProductsViewController
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self registerNotificationObservers];
+    
+    [self reloadProducts];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    self.products = [[[DatabaseManager sharedManager] dbContext] readAllProductsWithError:nil];
-    [self.tableView reloadData];
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Notifications
+
+- (void) registerNotificationObservers {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didSaveProductNotification:)
+                                                 name:kDatabaseContextDidSaveProductNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didDeleteProductNotification:)
+                                                 name:kDatabaseContextDidDeleteProductNotification
+                                               object:nil];
+}
+
+- (void) didSaveProductNotification:(NSNotification *) notification {
+    [self reloadProducts];
+}
+
+- (void) didDeleteProductNotification:(NSNotification *) notification {
+    [self reloadProducts];
 }
 
 #pragma mark - UITableViewDataSource
@@ -72,6 +96,13 @@
     productDetailsViewController.product = product;
     
     [self.navigationController pushViewController:productDetailsViewController animated:YES];
+}
+
+#pragma mark - Private Methods
+
+- (void) reloadProducts {
+    self.products = [[[DatabaseManager sharedManager] dbContext] readAllProductsWithError:nil];
+    [self.tableView reloadData];
 }
 
 @end
