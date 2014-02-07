@@ -1,0 +1,11 @@
+{
+    "productDescription" : "This is a Windows Phone mocked data...",
+    "name" : "Windows Phone Device",
+    "photoName" : "wp",
+    "colors" : [{"name":"Yellow", "argbValue":4294967040},{"name":"Black", "argbValue":4278190080}],
+    "regularPrice" : 15999,
+    "stores" : {
+        "totalStock" : 5,
+        "name" : "Macy's SF"
+    }
+}

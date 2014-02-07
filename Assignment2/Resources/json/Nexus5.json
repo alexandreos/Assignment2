@@ -1,0 +1,12 @@
+{
+    "productDescription" : "This is the Nexus 5 mocked data...",
+    "name" : "Nexus 5",
+    "photoName" : "nexus5",
+    "colors" : null,
+    "regularPrice" : 19999,
+    "salePrice" : 14999,
+    "stores" : {
+        "totalStock" : 20,
+        "name" : "Macy's NY"
+    }
+}

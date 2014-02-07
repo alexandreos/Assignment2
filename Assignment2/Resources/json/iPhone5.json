@@ -1,0 +1,12 @@
+{
+    "productDescription" : "This is the iPhone 5 mocked data...",
+    "name" : "iPhone 5",
+    "photoName" : "iphone5",
+    "colors" : [{"name":"White", "argbValue":4294967295},{"name":"Black", "argbValue":4278190080}],
+    "regularPrice" : 19999,
+    "salePrice" : 14999,
+    "stores" : {
+        "totalStock" : 10,
+        "name" : "Macy's SF"
+    }
+}
