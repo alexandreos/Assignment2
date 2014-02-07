@@ -40,7 +40,7 @@ After this initial setup, open the `Assignment2.xcworkspace` file and you are go
 - [FMDB](https://github.com/ccgus/fmdb): Used for handling SQLite.
 - [IDMPhotoBrowser](https://github.com/ideaismobile/IDMPhotoBrowser): Only used to display the product photo.
 
-I also used some other libraries and helper classes that I had created before.
+I also used some other libraries and helper classes that I had created before, which are in the `Classes/Util/` folder.
 
 ### Some Assumptions
 
