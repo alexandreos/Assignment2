@@ -7,7 +7,7 @@
 //
 
 #import "Product.h"
-#import <NSObject+OSReflectionKit.h>
+#import "NSObject+OSReflectionKit.h"
 #import "NSDictionary+JSONSerialization.h"
 
 @implementation Product

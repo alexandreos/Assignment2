@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "ProductsViewController.h"
 #import "DatabaseManager.h"
-#import <NSObject+OSReflectionKit.h>
+#import "NSObject+OSReflectionKit.h"
 
 typedef NS_ENUM(NSInteger, JSONSegmentIndex) {
     JSONSegmentIndexiPhone5 = 0,

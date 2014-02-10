@@ -8,7 +8,7 @@
 
 #import "DatabaseContext.h"
 #import "DatabaseManager.h"
-#import <NSObject+OSReflectionKit.h>
+#import "NSObject+OSReflectionKit.h"
 
 #define AssertObjectClass(object, klazz) NSAssert([object isKindOfClass:klazz], @"Expected object of class '%@', but received instance of '%@' at %s", NSStringFromClass(klazz), NSStringFromClass([object class]), __PRETTY_FUNCTION__)
 

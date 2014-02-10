@@ -9,7 +9,7 @@
 #import "ProductDetailsViewController.h"
 #import "DatabaseManager.h"
 #import "NSDictionary+JSONSerialization.h"
-#import <IDMPhotoBrowser/IDMPhotoBrowser.h>
+#import "IDMPhotoBrowser.h"
 #import "ProductColorsViewController.h"
 
 @interface ProductDetailsViewController () <UIActionSheetDelegate>

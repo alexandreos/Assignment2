@@ -7,7 +7,7 @@
 //
 
 #import "Color.h"
-#import <NSObject+OSReflectionKit.h>
+#import "NSObject+OSReflectionKit.h"
 #import "UIColor+ARGB.h"
 
 @implementation Color
