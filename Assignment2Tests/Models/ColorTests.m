@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Color.h"
-#import <NSObject+OSReflectionKit.h>
+#import "NSObject+OSReflectionKit.h"
 
 @interface ColorTests : XCTestCase
 

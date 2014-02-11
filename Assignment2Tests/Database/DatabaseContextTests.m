@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "DatabaseContext.h"
 #import "DatabaseManager.h"
-#import <NSObject+OSReflectionKit.h>
+#import "NSObject+OSReflectionKit.h"
 
 static NSString * const kTestingDBFileName = @"tests.sqlite";
 
